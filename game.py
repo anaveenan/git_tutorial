@@ -24,12 +24,15 @@ while playing:
         game_board = change(game_board, current_player)
 
         # stopping condition for while-loop
-        game_status = determine_game_status(game_board)
-        if game_status != "ongoing":
-            show(game_board)
-            print("Game finished!!!")
-            print(f"Player {current_player} has achieved a {game_status}! \n")
-            
+    game_status = determine_game_status(game_board)
+    if game_status != "ongoing":
+     show(game_board)
+     print("Game finished!!!")
+
+    if game_status == "draw":
+        print("It is a draw! \n")
+    else:
+        print(f"Player {current_player} has achieved a {game_status}! \n")            
     keep_playing = input("Do you want to play again? (y/n) ")
     if keep_playing != "y":
         playing = False
