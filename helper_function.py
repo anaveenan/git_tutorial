@@ -11,7 +11,7 @@ def create_initial_game_board():
             
     return game_board
 
-def show(game_board):
+def make_move(game_board):
     
     # separator between moves
     print("---------------------------------")
